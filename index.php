@@ -694,7 +694,7 @@ function get_client_version()
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>UniFi API browser</title>
+        <title>UniFi Stats</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- latest compiled and minified versions of Bootstrap, Font-awesome and Highlight.js CSS, loaded from CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -764,7 +764,7 @@ function get_client_version()
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php">UniFi Usage</a>
+                    <a class="navbar-brand" href="index.php">UniFi Stats</a>
                 </div>
                 <div id="navbar-main" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -885,7 +885,7 @@ function get_client_version()
                 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3 align="center">UniFi Controller login</h3>
+                            <h3 align="center">UniFi Stats login</h3>
                             <br>
                             <div id="login_alert_placeholder" style="display: none"></div>
                             <form method="post">
@@ -1515,7 +1515,7 @@ function get_client_version()
 
                   $usage_line = '';
                   $usage_line += '<div class="usage-line">';
-                    $usage_line += '<div>' + $date + ' (' + days + ' days ago)</div>';
+                    $usage_line += '<div>' + $date + ' <span>(' + days + ' days ago)</span></div>';
                     $usage_line += '<div>' + $up + 'GB</div>';
                     $usage_line += '<div>' + $down + 'GB</div>';
                     $usage_line += '<div>' + $total + 'GB</div>';
@@ -1530,6 +1530,17 @@ function get_client_version()
             
             $grandTotal = Math.round( $grandTotal_raw * 100 ) / 100;
             $('.usage').prepend('<h2>Total: ' + $grandTotal + 'GB</h2>');
+
+
+
+            <?php if ($_GET["from_d"] && $_GET["from_m"] && $_GET["from_y"] && $_GET["from_d"] && $_GET["from_m"] && $_GET["from_y"]): ?>
+              $('.usage').prepend('<hr></hr><h5>Usage from <?php echo $_GET["from_d"] . '/' . $_GET["from_m"] . '/' . $_GET["from_y"] . ' to ' . $_GET["to_d"] . '/' . $_GET["to_m"] . '/' . $_GET["to_y"]; ?></h5>');
+            <?php elseif ($_GET["days"] == ''): ?>
+              $('.usage').prepend('<hr></hr><h5>Usage over the last the 30 days</h5>');
+            <?php else: ?>
+              $('.usage').prepend('<hr></hr><h5>Usage over the last the <?php echo $_GET["days"]; ?> days</h5>');
+            <?php endif; ?>
+
 
             // console.log( $dataObj );
           });
@@ -1580,8 +1591,28 @@ function get_client_version()
             margin: 0 2rem 0 0;
           }
           h2 {
-            padding: 0 0 0.5rem;
+            margin: 0;
+            padding: 0 0 20px;
             border-bottom: 1px solid #DDDDDD;
+          }
+          hr {
+            margin: 10px 0 20px;
+          }
+          @media screen and (max-width: 680px) {
+            .usage-line span {
+              display: none;
+            }
+            .usage-headings {
+              font-size: 1.4rem;
+              font-weight: bold;
+            }
+            .usage-form form {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .usage-form form > div {
+              padding: 0.5rem 0;
+            }
           }
         </style>
 
