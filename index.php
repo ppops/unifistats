@@ -1443,7 +1443,6 @@ function get_client_version()
 
         <script>
           $( document ).ready(function() {
-            console.log( "ready!" );
 
             $grandTotal = 0;
             $grandTotal_raw = 0;
@@ -1455,19 +1454,12 @@ function get_client_version()
                 //console.log(key, obj[key]);
 
                 $date_raw = obj[key]['time'];
+                $dateMoment = moment($date_raw).format('YYYY-MM-DD');
+                $dateMomentPretty = moment($date_raw).format('Do MMM YYYY');
 
-                var formattedDate = new Date($date_raw);
-                var d = formattedDate.getDate();
-                var m =  formattedDate.getMonth();
-                m += 1;  // JavaScript months are 0-11
-                var y = formattedDate.getFullYear();
-                $date = d + "/" + m + "/" + y;
+                $currentDate = moment().format('YYYY-MM-DD');
+                $days = -1 * moment($dateMoment).diff($currentDate, 'days');
 
-                var start = new Date(formattedDate),
-                  end   = new Date(),
-                  diff  = new Date(end - start),
-                  days  = Math.round(diff/1000/60/60/24);
-                
                 <?php
                   $days = $_GET["days"];
                   if (!$_GET["days"]) {
@@ -1481,8 +1473,8 @@ function get_client_version()
                   $to_d = $_GET["to_d"];
                   $to_m = $_GET["to_m"];
                   $to_y = $_GET["to_y"];
-                  $startDate = $from_y . '.' . $from_m . '.' . $from_d;
-                  $endDate = $to_y . '.' . $to_m . '.' . $to_d;
+                  $startDate = $from_y . '-' . $from_m . '-' . $from_d;
+                  $endDate = $to_y . '-' . $to_m . '-' . $to_d;
 
 
                 ?>
@@ -1490,17 +1482,15 @@ function get_client_version()
 
                   
                   $startDate_raw = new Date('<?php echo $startDate; ?>').getTime();
-                  //$startDate_raw = new Date($startDate_raw.toString().replace(' ', 'T'));
-                  var $startDate = new Date($startDate_raw);
+                  $startDateMoment = moment($startDate_raw).format('YYYY-MM-DD');
                   $endDate_raw = new Date('<?php echo $endDate; ?>').getTime();
-                  //$endDate_raw = new Date($endDate_raw.toString().replace(' ', 'T'));
-                  var $endDate = new Date($endDate_raw);
+                  $endDateMoment = moment($endDate_raw).format('YYYY-MM-DD');
 
-                  if ($startDate <= formattedDate && $endDate >= formattedDate) {
+                  if (moment($startDateMoment).isSameOrBefore($dateMoment) && moment($endDateMoment).isSameOrAfter($dateMoment)) {
                     writeData();
                   }
                 <?php else: ?>
-                  if (days <= <?php echo $days; ?>) {
+                  if ($days <= <?php echo $days; ?>) {
                     writeData();
                   }
                 <?php endif; ?>
@@ -1517,7 +1507,7 @@ function get_client_version()
 
                   $usage_line = '';
                   $usage_line += '<div class="usage-line">';
-                    $usage_line += '<div>' + $date + ' <span>(' + days + ' days ago)</span></div>';
+                    $usage_line += '<div>' + $dateMomentPretty + ' <span>(' + $days + ' days ago)</span></div>';
                     $usage_line += '<div>' + $up + 'GB</div>';
                     $usage_line += '<div>' + $down + 'GB</div>';
                     $usage_line += '<div>' + $total + 'GB</div>';
@@ -1540,15 +1530,14 @@ function get_client_version()
             <?php elseif ($days == ''): ?>
               $('.usage').prepend('<hr></hr><h5>Usage over the last the 30 days</h5>');
             <?php else: ?>
-              $('.usage').prepend('<hr></hr><h5>Usage over the last the <?php echo $_GET["days"]; ?> days</h5>');
+              $('.usage').prepend('<hr></hr><h5>Usage over the last the <?php echo $days; ?> days</h5>');
             <?php endif; ?>
 
 
             // console.log( $dataObj );
           });
         </script>
-        <!-- <script type="application/javascript" src="vendor/jquery-dateformat.min.js" /> -->
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <?php if (isset($_SESSION['unificookie'])) : ?>
           <div class="usage">
             <div class="usage-headings">
@@ -1614,6 +1603,9 @@ function get_client_version()
             }
             .usage-form form > div {
               padding: 0.5rem 0;
+            }
+            .usage-headings div:first-child, .usage-line div:first-child {
+              width: 100px;
             }
           }
         </style>
