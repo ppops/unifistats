@@ -1452,7 +1452,7 @@ function get_client_version()
             Object.keys(obj).forEach(function(key) {
 
 
-                console.log(key, obj[key]);
+                //console.log(key, obj[key]);
 
                 $date_raw = obj[key]['time'];
 
@@ -1467,7 +1467,7 @@ function get_client_version()
                   end   = new Date(),
                   diff  = new Date(end - start),
                   days  = Math.round(diff/1000/60/60/24);
-
+                
                 <?php
                   $days = $_GET["days"];
                   if (!$_GET["days"]) {
@@ -1490,8 +1490,10 @@ function get_client_version()
 
                   
                   $startDate_raw = new Date('<?php echo $startDate; ?>').getTime();
+                  //$startDate_raw = new Date($startDate_raw.toString().replace(' ', 'T'));
                   var $startDate = new Date($startDate_raw);
                   $endDate_raw = new Date('<?php echo $endDate; ?>').getTime();
+                  //$endDate_raw = new Date($endDate_raw.toString().replace(' ', 'T'));
                   var $endDate = new Date($endDate_raw);
 
                   if ($startDate <= formattedDate && $endDate >= formattedDate) {
@@ -1533,9 +1535,9 @@ function get_client_version()
 
 
 
-            <?php if ($_GET["from_d"] && $_GET["from_m"] && $_GET["from_y"] && $_GET["from_d"] && $_GET["from_m"] && $_GET["from_y"]): ?>
-              $('.usage').prepend('<hr></hr><h5>Usage from <?php echo $_GET["from_d"] . '/' . $_GET["from_m"] . '/' . $_GET["from_y"] . ' to ' . $_GET["to_d"] . '/' . $_GET["to_m"] . '/' . $_GET["to_y"]; ?></h5>');
-            <?php elseif ($_GET["days"] == ''): ?>
+            <?php if ($from_d && $from_m && $from_y && $to_d && $to_m && $to_y): ?>
+              $('.usage').prepend('<hr></hr><h5>Usage from <?php echo $from_d . '/' . $from_m . '/' . $from_y . ' to ' . $to_d . '/' . $to_m . '/' . $to_y; ?></h5>');
+            <?php elseif ($days == ''): ?>
               $('.usage').prepend('<hr></hr><h5>Usage over the last the 30 days</h5>');
             <?php else: ?>
               $('.usage').prepend('<hr></hr><h5>Usage over the last the <?php echo $_GET["days"]; ?> days</h5>');
