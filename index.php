@@ -1472,11 +1472,6 @@ function get_client_version()
             input[type=submit] {
               padding: 0.2rem 1.2rem;
             }
-            .usage-form select {
-              padding: 0.2rem 1.6rem 0.2rem 0.6rem;
-              background-size: 8px;
-              background-position: right 6px center;
-            }
             .usage-headings div:first-child, .usage-line div:first-child {
               width: 100px;
             }
