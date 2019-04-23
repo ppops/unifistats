@@ -75,7 +75,7 @@ $controlleruser     = '';
 $controllerpassword = '';
 $controllerurl      = '';
 $controllername     = 'Controller';
-$cookietimeout      = '3600';
+$cookietimeout      = '604800';
 $theme              = 'bootstrap';
 $debug              = false;
 
@@ -740,8 +740,8 @@ function get_client_version()
             </div>
         </div>
         <?php if (isset($_SESSION['unificookie'])) { ?>
-
           <?php
+            date_default_timezone_set('Australia/Melbourne');
             $current_day = date("d");
             $current_month = date("m");
             $current_year = date("Y");
@@ -1315,6 +1315,9 @@ function get_client_version()
             background-color: #1C1E2D;
             color: white;
           }
+          #site-menu {
+            display: none;
+          }
           .dropdown-menu {
             background-color: #242635;
             color: #7e8190;
@@ -1331,6 +1334,7 @@ function get_client_version()
           }
           .navbar-brand svg {
             color: white;
+            margin: 0 0 0 6px;
           }
           .dropdown-header {
             color: white;
@@ -1474,6 +1478,16 @@ function get_client_version()
             }
             .usage-headings div:first-child, .usage-line div:first-child {
               width: 100px;
+            }
+            .navbar-collapse {
+              padding-right: 0;
+              padding-left: 0;
+            }
+            .navbar-nav {
+              margin: 7.5px 0;
+            }
+            .nav>li>a {
+              box-sizing: border-box;
             }
           }
         </style>
