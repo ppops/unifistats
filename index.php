@@ -1371,6 +1371,18 @@ function get_client_version()
             border-color: #323442;
           }
 
+          .panel-default {
+            background-color: #242635;
+            color: white;
+            border-color: #323442;
+          }
+          .panel-default input[type=text], .panel-default input[type=password] {
+            background-color: #323442;
+            border: 1px solid #4c4d58;
+            color: white;
+          }
+
+
           body {
             background-color: #1C1E2D;
             color: #7e8190;
