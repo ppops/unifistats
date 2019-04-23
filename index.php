@@ -872,7 +872,7 @@ function get_client_version()
             </form>
             <form>
               <div>
-                <label class="long">Last number of days</label>
+                <label>Last number of days</label>
                 <select name="days">
                   <option<?php if ($_GET["days"] == '1') { echo ' selected'; } ?>>1</option>
                   <option<?php if ($_GET["days"] == '2') { echo ' selected'; } ?>>2</option>
@@ -1432,7 +1432,7 @@ function get_client_version()
             background-color: #323442;
             border: 1px solid #4c4d58;
             color: #7e8190;
-            padding: 0.2rem 2rem;
+            padding: 0.2rem 2rem 0.2rem 1rem;
             border-radius: 0.5rem;
             -webkit-appearance: none;
             background-image: url('arrow.svg');
@@ -1464,7 +1464,18 @@ function get_client_version()
               margin: 0 0 0.5rem 0;
             }
             .usage-form .dates label {
-              width: 40px;
+              width: 34px;
+            }
+            .usage-form form > div {
+              margin: 0 1.5rem 0 0;
+            }
+            input[type=submit] {
+              padding: 0.2rem 1.2rem;
+            }
+            .usage-form select {
+              padding: 0.2rem 1.6rem 0.2rem 0.6rem;
+              background-size: 8px;
+              background-position: right 6px center;
             }
             .usage-headings div:first-child, .usage-line div:first-child {
               width: 100px;
