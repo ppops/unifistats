@@ -748,123 +748,125 @@ function get_client_version()
           ?>
           <div class="usage-form">
             <form>
-              <div>
-                <label>From</label>
-                <select name="from_d">
-                  <option<?php if ($_GET["from_d"] == '01') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '1') { echo ' selected'; } ?>>01</option>
-                  <option<?php if ($_GET["from_d"] == '02') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '2') { echo ' selected'; } ?>>02</option>
-                  <option<?php if ($_GET["from_d"] == '03') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '3') { echo ' selected'; } ?>>03</option>
-                  <option<?php if ($_GET["from_d"] == '04') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '4') { echo ' selected'; } ?>>04</option>
-                  <option<?php if ($_GET["from_d"] == '05') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '5') { echo ' selected'; } ?>>05</option>
-                  <option<?php if ($_GET["from_d"] == '06') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '6') { echo ' selected'; } ?>>06</option>
-                  <option<?php if ($_GET["from_d"] == '07') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '7') { echo ' selected'; } ?>>07</option>
-                  <option<?php if ($_GET["from_d"] == '08') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '8') { echo ' selected'; } ?>>08</option>
-                  <option<?php if ($_GET["from_d"] == '09') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '9') { echo ' selected'; } ?>>09</option>
-                  <option<?php if ($_GET["from_d"] == '10') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '10') { echo ' selected'; } ?>>10</option>
-                  <option<?php if ($_GET["from_d"] == '11') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '11') { echo ' selected'; } ?>>11</option>
-                  <option<?php if ($_GET["from_d"] == '12') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '12') { echo ' selected'; } ?>>12</option>
-                  <option<?php if ($_GET["from_d"] == '13') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '13') { echo ' selected'; } ?>>13</option>
-                  <option<?php if ($_GET["from_d"] == '14') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '14') { echo ' selected'; } ?>>14</option>
-                  <option<?php if ($_GET["from_d"] == '15') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '15') { echo ' selected'; } ?>>15</option>
-                  <option<?php if ($_GET["from_d"] == '16') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '16') { echo ' selected'; } ?>>16</option>
-                  <option<?php if ($_GET["from_d"] == '17') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '17') { echo ' selected'; } ?>>17</option>
-                  <option<?php if ($_GET["from_d"] == '18') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '18') { echo ' selected'; } ?>>18</option>
-                  <option<?php if ($_GET["from_d"] == '19') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '19') { echo ' selected'; } ?>>19</option>
-                  <option<?php if ($_GET["from_d"] == '20') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '20') { echo ' selected'; } ?>>20</option>
-                  <option<?php if ($_GET["from_d"] == '21') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '21') { echo ' selected'; } ?>>21</option>
-                  <option<?php if ($_GET["from_d"] == '22') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '22') { echo ' selected'; } ?>>22</option>
-                  <option<?php if ($_GET["from_d"] == '23') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '23') { echo ' selected'; } ?>>23</option>
-                  <option<?php if ($_GET["from_d"] == '24') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '24') { echo ' selected'; } ?>>24</option>
-                  <option<?php if ($_GET["from_d"] == '25') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '25') { echo ' selected'; } ?>>25</option>
-                  <option<?php if ($_GET["from_d"] == '26') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '26') { echo ' selected'; } ?>>26</option>
-                  <option<?php if ($_GET["from_d"] == '27') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '27') { echo ' selected'; } ?>>27</option>
-                  <option<?php if ($_GET["from_d"] == '28') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '28') { echo ' selected'; } ?>>28</option>
-                  <option<?php if ($_GET["from_d"] == '29') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '29') { echo ' selected'; } ?>>29</option>
-                  <option<?php if ($_GET["from_d"] == '30') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '30') { echo ' selected'; } ?>>30</option>
-                  <option<?php if ($_GET["from_d"] == '31') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '31') { echo ' selected'; } ?>>31</option>
-                </select>
-                <select name="from_m">
-                  <option<?php if ($_GET["from_m"] == '01') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '01') { echo ' selected'; } ?>>01</option>
-                  <option<?php if ($_GET["from_m"] == '02') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '02') { echo ' selected'; } ?>>02</option>
-                  <option<?php if ($_GET["from_m"] == '03') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '03') { echo ' selected'; } ?>>03</option>
-                  <option<?php if ($_GET["from_m"] == '04') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '04') { echo ' selected'; } ?>>04</option>
-                  <option<?php if ($_GET["from_m"] == '05') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '05') { echo ' selected'; } ?>>05</option>
-                  <option<?php if ($_GET["from_m"] == '06') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '06') { echo ' selected'; } ?>>06</option>
-                  <option<?php if ($_GET["from_m"] == '07') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '07') { echo ' selected'; } ?>>07</option>
-                  <option<?php if ($_GET["from_m"] == '08') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '08') { echo ' selected'; } ?>>08</option>
-                  <option<?php if ($_GET["from_m"] == '09') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '09') { echo ' selected'; } ?>>09</option>
-                  <option<?php if ($_GET["from_m"] == '10') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '10') { echo ' selected'; } ?>>10</option>
-                  <option<?php if ($_GET["from_m"] == '11') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '11') { echo ' selected'; } ?>>11</option>
-                  <option<?php if ($_GET["from_m"] == '12') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '12') { echo ' selected'; } ?>>12</option>
-                </select>
-                <select name="from_y">
-                  <option<?php if ($_GET["from_y"] == '2019') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2019') { echo ' selected'; } ?>>2019</option>
-                  <option<?php if ($_GET["from_y"] == '2020') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2020') { echo ' selected'; } ?>>2020</option>
-                  <option<?php if ($_GET["from_y"] == '2021') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2021') { echo ' selected'; } ?>>2021</option>
-                  <option<?php if ($_GET["from_y"] == '2022') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2022') { echo ' selected'; } ?>>2022</option>
-                  <option<?php if ($_GET["from_y"] == '2023') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2023') { echo ' selected'; } ?>>2023</option>
-                  <option<?php if ($_GET["from_y"] == '2024') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2024') { echo ' selected'; } ?>>2024</option>
-                  <option<?php if ($_GET["from_y"] == '2025') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2025') { echo ' selected'; } ?>>2025</option>
-                </select>
-              </div>
-              <div>
-                <label>To</label>
-                <select name="to_d">
-                  <option<?php if ($_GET["to_d"] == '01') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '1') { echo ' selected'; } ?>>01</option>
-                  <option<?php if ($_GET["to_d"] == '02') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '2') { echo ' selected'; } ?>>02</option>
-                  <option<?php if ($_GET["to_d"] == '03') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '3') { echo ' selected'; } ?>>03</option>
-                  <option<?php if ($_GET["to_d"] == '04') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '4') { echo ' selected'; } ?>>04</option>
-                  <option<?php if ($_GET["to_d"] == '05') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '5') { echo ' selected'; } ?>>05</option>
-                  <option<?php if ($_GET["to_d"] == '06') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '6') { echo ' selected'; } ?>>06</option>
-                  <option<?php if ($_GET["to_d"] == '07') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '7') { echo ' selected'; } ?>>07</option>
-                  <option<?php if ($_GET["to_d"] == '08') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '8') { echo ' selected'; } ?>>08</option>
-                  <option<?php if ($_GET["to_d"] == '09') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '9') { echo ' selected'; } ?>>09</option>
-                  <option<?php if ($_GET["to_d"] == '10') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '10') { echo ' selected'; } ?>>10</option>
-                  <option<?php if ($_GET["to_d"] == '11') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '11') { echo ' selected'; } ?>>11</option>
-                  <option<?php if ($_GET["to_d"] == '12') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '12') { echo ' selected'; } ?>>12</option>
-                  <option<?php if ($_GET["to_d"] == '13') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '13') { echo ' selected'; } ?>>13</option>
-                  <option<?php if ($_GET["to_d"] == '14') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '14') { echo ' selected'; } ?>>14</option>
-                  <option<?php if ($_GET["to_d"] == '15') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '15') { echo ' selected'; } ?>>15</option>
-                  <option<?php if ($_GET["to_d"] == '16') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '16') { echo ' selected'; } ?>>16</option>
-                  <option<?php if ($_GET["to_d"] == '17') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '17') { echo ' selected'; } ?>>17</option>
-                  <option<?php if ($_GET["to_d"] == '18') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '18') { echo ' selected'; } ?>>18</option>
-                  <option<?php if ($_GET["to_d"] == '19') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '19') { echo ' selected'; } ?>>19</option>
-                  <option<?php if ($_GET["to_d"] == '20') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '20') { echo ' selected'; } ?>>20</option>
-                  <option<?php if ($_GET["to_d"] == '21') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '21') { echo ' selected'; } ?>>21</option>
-                  <option<?php if ($_GET["to_d"] == '22') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '22') { echo ' selected'; } ?>>22</option>
-                  <option<?php if ($_GET["to_d"] == '23') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '23') { echo ' selected'; } ?>>23</option>
-                  <option<?php if ($_GET["to_d"] == '24') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '24') { echo ' selected'; } ?>>24</option>
-                  <option<?php if ($_GET["to_d"] == '25') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '25') { echo ' selected'; } ?>>25</option>
-                  <option<?php if ($_GET["to_d"] == '26') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '26') { echo ' selected'; } ?>>26</option>
-                  <option<?php if ($_GET["to_d"] == '27') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '27') { echo ' selected'; } ?>>27</option>
-                  <option<?php if ($_GET["to_d"] == '28') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '28') { echo ' selected'; } ?>>28</option>
-                  <option<?php if ($_GET["to_d"] == '29') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '29') { echo ' selected'; } ?>>29</option>
-                  <option<?php if ($_GET["to_d"] == '30') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '30') { echo ' selected'; } ?>>30</option>
-                  <option<?php if ($_GET["to_d"] == '31') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '31') { echo ' selected'; } ?>>31</option>
-                </select>
-                <select name="to_m">
-                  <option<?php if ($_GET["to_m"] == '01') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '01') { echo ' selected'; } ?>>01</option>
-                  <option<?php if ($_GET["to_m"] == '02') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '02') { echo ' selected'; } ?>>02</option>
-                  <option<?php if ($_GET["to_m"] == '03') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '03') { echo ' selected'; } ?>>03</option>
-                  <option<?php if ($_GET["to_m"] == '04') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '04') { echo ' selected'; } ?>>04</option>
-                  <option<?php if ($_GET["to_m"] == '05') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '05') { echo ' selected'; } ?>>05</option>
-                  <option<?php if ($_GET["to_m"] == '06') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '06') { echo ' selected'; } ?>>06</option>
-                  <option<?php if ($_GET["to_m"] == '07') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '07') { echo ' selected'; } ?>>07</option>
-                  <option<?php if ($_GET["to_m"] == '08') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '08') { echo ' selected'; } ?>>08</option>
-                  <option<?php if ($_GET["to_m"] == '09') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '09') { echo ' selected'; } ?>>09</option>
-                  <option<?php if ($_GET["to_m"] == '10') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '10') { echo ' selected'; } ?>>10</option>
-                  <option<?php if ($_GET["to_m"] == '11') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '11') { echo ' selected'; } ?>>11</option>
-                  <option<?php if ($_GET["to_m"] == '12') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '12') { echo ' selected'; } ?>>12</option>
-                </select>
-                <select name="to_y">
-                  <option<?php if ($_GET["to_y"] == '2019') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2019') { echo ' selected'; } ?>>2019</option>
-                  <option<?php if ($_GET["to_y"] == '2020') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2020') { echo ' selected'; } ?>>2020</option>
-                  <option<?php if ($_GET["to_y"] == '2021') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2021') { echo ' selected'; } ?>>2021</option>
-                  <option<?php if ($_GET["to_y"] == '2022') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2022') { echo ' selected'; } ?>>2022</option>
-                  <option<?php if ($_GET["to_y"] == '2023') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2023') { echo ' selected'; } ?>>2023</option>
-                  <option<?php if ($_GET["to_y"] == '2024') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2024') { echo ' selected'; } ?>>2024</option>
-                  <option<?php if ($_GET["to_y"] == '2025') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2025') { echo ' selected'; } ?>>2025</option>
-                </select><br />
+              <div class="dates">
+                <div>
+                  <label>From</label>
+                  <select name="from_d">
+                    <option<?php if ($_GET["from_d"] == '01') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '1') { echo ' selected'; } ?>>01</option>
+                    <option<?php if ($_GET["from_d"] == '02') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '2') { echo ' selected'; } ?>>02</option>
+                    <option<?php if ($_GET["from_d"] == '03') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '3') { echo ' selected'; } ?>>03</option>
+                    <option<?php if ($_GET["from_d"] == '04') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '4') { echo ' selected'; } ?>>04</option>
+                    <option<?php if ($_GET["from_d"] == '05') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '5') { echo ' selected'; } ?>>05</option>
+                    <option<?php if ($_GET["from_d"] == '06') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '6') { echo ' selected'; } ?>>06</option>
+                    <option<?php if ($_GET["from_d"] == '07') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '7') { echo ' selected'; } ?>>07</option>
+                    <option<?php if ($_GET["from_d"] == '08') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '8') { echo ' selected'; } ?>>08</option>
+                    <option<?php if ($_GET["from_d"] == '09') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '9') { echo ' selected'; } ?>>09</option>
+                    <option<?php if ($_GET["from_d"] == '10') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '10') { echo ' selected'; } ?>>10</option>
+                    <option<?php if ($_GET["from_d"] == '11') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '11') { echo ' selected'; } ?>>11</option>
+                    <option<?php if ($_GET["from_d"] == '12') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '12') { echo ' selected'; } ?>>12</option>
+                    <option<?php if ($_GET["from_d"] == '13') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '13') { echo ' selected'; } ?>>13</option>
+                    <option<?php if ($_GET["from_d"] == '14') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '14') { echo ' selected'; } ?>>14</option>
+                    <option<?php if ($_GET["from_d"] == '15') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '15') { echo ' selected'; } ?>>15</option>
+                    <option<?php if ($_GET["from_d"] == '16') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '16') { echo ' selected'; } ?>>16</option>
+                    <option<?php if ($_GET["from_d"] == '17') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '17') { echo ' selected'; } ?>>17</option>
+                    <option<?php if ($_GET["from_d"] == '18') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '18') { echo ' selected'; } ?>>18</option>
+                    <option<?php if ($_GET["from_d"] == '19') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '19') { echo ' selected'; } ?>>19</option>
+                    <option<?php if ($_GET["from_d"] == '20') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '20') { echo ' selected'; } ?>>20</option>
+                    <option<?php if ($_GET["from_d"] == '21') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '21') { echo ' selected'; } ?>>21</option>
+                    <option<?php if ($_GET["from_d"] == '22') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '22') { echo ' selected'; } ?>>22</option>
+                    <option<?php if ($_GET["from_d"] == '23') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '23') { echo ' selected'; } ?>>23</option>
+                    <option<?php if ($_GET["from_d"] == '24') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '24') { echo ' selected'; } ?>>24</option>
+                    <option<?php if ($_GET["from_d"] == '25') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '25') { echo ' selected'; } ?>>25</option>
+                    <option<?php if ($_GET["from_d"] == '26') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '26') { echo ' selected'; } ?>>26</option>
+                    <option<?php if ($_GET["from_d"] == '27') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '27') { echo ' selected'; } ?>>27</option>
+                    <option<?php if ($_GET["from_d"] == '28') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '28') { echo ' selected'; } ?>>28</option>
+                    <option<?php if ($_GET["from_d"] == '29') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '29') { echo ' selected'; } ?>>29</option>
+                    <option<?php if ($_GET["from_d"] == '30') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '30') { echo ' selected'; } ?>>30</option>
+                    <option<?php if ($_GET["from_d"] == '31') { echo ' selected'; } elseif ($_GET["from_d"] == '' && $current_day == '31') { echo ' selected'; } ?>>31</option>
+                  </select>
+                  <select name="from_m">
+                    <option<?php if ($_GET["from_m"] == '01') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '01') { echo ' selected'; } ?>>01</option>
+                    <option<?php if ($_GET["from_m"] == '02') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '02') { echo ' selected'; } ?>>02</option>
+                    <option<?php if ($_GET["from_m"] == '03') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '03') { echo ' selected'; } ?>>03</option>
+                    <option<?php if ($_GET["from_m"] == '04') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '04') { echo ' selected'; } ?>>04</option>
+                    <option<?php if ($_GET["from_m"] == '05') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '05') { echo ' selected'; } ?>>05</option>
+                    <option<?php if ($_GET["from_m"] == '06') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '06') { echo ' selected'; } ?>>06</option>
+                    <option<?php if ($_GET["from_m"] == '07') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '07') { echo ' selected'; } ?>>07</option>
+                    <option<?php if ($_GET["from_m"] == '08') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '08') { echo ' selected'; } ?>>08</option>
+                    <option<?php if ($_GET["from_m"] == '09') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '09') { echo ' selected'; } ?>>09</option>
+                    <option<?php if ($_GET["from_m"] == '10') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '10') { echo ' selected'; } ?>>10</option>
+                    <option<?php if ($_GET["from_m"] == '11') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '11') { echo ' selected'; } ?>>11</option>
+                    <option<?php if ($_GET["from_m"] == '12') { echo ' selected'; } elseif ($_GET["from_m"] == '' && $current_month == '12') { echo ' selected'; } ?>>12</option>
+                  </select>
+                  <select name="from_y">
+                    <option<?php if ($_GET["from_y"] == '2019') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2019') { echo ' selected'; } ?>>2019</option>
+                    <option<?php if ($_GET["from_y"] == '2020') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2020') { echo ' selected'; } ?>>2020</option>
+                    <option<?php if ($_GET["from_y"] == '2021') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2021') { echo ' selected'; } ?>>2021</option>
+                    <option<?php if ($_GET["from_y"] == '2022') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2022') { echo ' selected'; } ?>>2022</option>
+                    <option<?php if ($_GET["from_y"] == '2023') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2023') { echo ' selected'; } ?>>2023</option>
+                    <option<?php if ($_GET["from_y"] == '2024') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2024') { echo ' selected'; } ?>>2024</option>
+                    <option<?php if ($_GET["from_y"] == '2025') { echo ' selected'; } elseif ($_GET["from_y"] == '' && $current_year == '2025') { echo ' selected'; } ?>>2025</option>
+                  </select>
+                </div>
+                <div>
+                  <label>To</label>
+                  <select name="to_d">
+                    <option<?php if ($_GET["to_d"] == '01') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '1') { echo ' selected'; } ?>>01</option>
+                    <option<?php if ($_GET["to_d"] == '02') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '2') { echo ' selected'; } ?>>02</option>
+                    <option<?php if ($_GET["to_d"] == '03') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '3') { echo ' selected'; } ?>>03</option>
+                    <option<?php if ($_GET["to_d"] == '04') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '4') { echo ' selected'; } ?>>04</option>
+                    <option<?php if ($_GET["to_d"] == '05') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '5') { echo ' selected'; } ?>>05</option>
+                    <option<?php if ($_GET["to_d"] == '06') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '6') { echo ' selected'; } ?>>06</option>
+                    <option<?php if ($_GET["to_d"] == '07') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '7') { echo ' selected'; } ?>>07</option>
+                    <option<?php if ($_GET["to_d"] == '08') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '8') { echo ' selected'; } ?>>08</option>
+                    <option<?php if ($_GET["to_d"] == '09') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '9') { echo ' selected'; } ?>>09</option>
+                    <option<?php if ($_GET["to_d"] == '10') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '10') { echo ' selected'; } ?>>10</option>
+                    <option<?php if ($_GET["to_d"] == '11') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '11') { echo ' selected'; } ?>>11</option>
+                    <option<?php if ($_GET["to_d"] == '12') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '12') { echo ' selected'; } ?>>12</option>
+                    <option<?php if ($_GET["to_d"] == '13') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '13') { echo ' selected'; } ?>>13</option>
+                    <option<?php if ($_GET["to_d"] == '14') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '14') { echo ' selected'; } ?>>14</option>
+                    <option<?php if ($_GET["to_d"] == '15') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '15') { echo ' selected'; } ?>>15</option>
+                    <option<?php if ($_GET["to_d"] == '16') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '16') { echo ' selected'; } ?>>16</option>
+                    <option<?php if ($_GET["to_d"] == '17') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '17') { echo ' selected'; } ?>>17</option>
+                    <option<?php if ($_GET["to_d"] == '18') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '18') { echo ' selected'; } ?>>18</option>
+                    <option<?php if ($_GET["to_d"] == '19') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '19') { echo ' selected'; } ?>>19</option>
+                    <option<?php if ($_GET["to_d"] == '20') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '20') { echo ' selected'; } ?>>20</option>
+                    <option<?php if ($_GET["to_d"] == '21') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '21') { echo ' selected'; } ?>>21</option>
+                    <option<?php if ($_GET["to_d"] == '22') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '22') { echo ' selected'; } ?>>22</option>
+                    <option<?php if ($_GET["to_d"] == '23') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '23') { echo ' selected'; } ?>>23</option>
+                    <option<?php if ($_GET["to_d"] == '24') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '24') { echo ' selected'; } ?>>24</option>
+                    <option<?php if ($_GET["to_d"] == '25') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '25') { echo ' selected'; } ?>>25</option>
+                    <option<?php if ($_GET["to_d"] == '26') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '26') { echo ' selected'; } ?>>26</option>
+                    <option<?php if ($_GET["to_d"] == '27') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '27') { echo ' selected'; } ?>>27</option>
+                    <option<?php if ($_GET["to_d"] == '28') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '28') { echo ' selected'; } ?>>28</option>
+                    <option<?php if ($_GET["to_d"] == '29') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '29') { echo ' selected'; } ?>>29</option>
+                    <option<?php if ($_GET["to_d"] == '30') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '30') { echo ' selected'; } ?>>30</option>
+                    <option<?php if ($_GET["to_d"] == '31') { echo ' selected'; } elseif ($_GET["to_d"] == '' && $current_day == '31') { echo ' selected'; } ?>>31</option>
+                  </select>
+                  <select name="to_m">
+                    <option<?php if ($_GET["to_m"] == '01') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '01') { echo ' selected'; } ?>>01</option>
+                    <option<?php if ($_GET["to_m"] == '02') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '02') { echo ' selected'; } ?>>02</option>
+                    <option<?php if ($_GET["to_m"] == '03') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '03') { echo ' selected'; } ?>>03</option>
+                    <option<?php if ($_GET["to_m"] == '04') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '04') { echo ' selected'; } ?>>04</option>
+                    <option<?php if ($_GET["to_m"] == '05') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '05') { echo ' selected'; } ?>>05</option>
+                    <option<?php if ($_GET["to_m"] == '06') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '06') { echo ' selected'; } ?>>06</option>
+                    <option<?php if ($_GET["to_m"] == '07') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '07') { echo ' selected'; } ?>>07</option>
+                    <option<?php if ($_GET["to_m"] == '08') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '08') { echo ' selected'; } ?>>08</option>
+                    <option<?php if ($_GET["to_m"] == '09') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '09') { echo ' selected'; } ?>>09</option>
+                    <option<?php if ($_GET["to_m"] == '10') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '10') { echo ' selected'; } ?>>10</option>
+                    <option<?php if ($_GET["to_m"] == '11') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '11') { echo ' selected'; } ?>>11</option>
+                    <option<?php if ($_GET["to_m"] == '12') { echo ' selected'; } elseif ($_GET["to_m"] == '' && $current_month == '12') { echo ' selected'; } ?>>12</option>
+                  </select>
+                  <select name="to_y">
+                    <option<?php if ($_GET["to_y"] == '2019') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2019') { echo ' selected'; } ?>>2019</option>
+                    <option<?php if ($_GET["to_y"] == '2020') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2020') { echo ' selected'; } ?>>2020</option>
+                    <option<?php if ($_GET["to_y"] == '2021') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2021') { echo ' selected'; } ?>>2021</option>
+                    <option<?php if ($_GET["to_y"] == '2022') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2022') { echo ' selected'; } ?>>2022</option>
+                    <option<?php if ($_GET["to_y"] == '2023') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2023') { echo ' selected'; } ?>>2023</option>
+                    <option<?php if ($_GET["to_y"] == '2024') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2024') { echo ' selected'; } ?>>2024</option>
+                    <option<?php if ($_GET["to_y"] == '2025') { echo ' selected'; } elseif ($_GET["to_y"] == '' && $current_year == '2025') { echo ' selected'; } ?>>2025</option>
+                  </select><br />
+                </div>
               </div>
               <input type="submit" name="submit" value="Submit">
             </form>
@@ -1405,7 +1407,14 @@ function get_client_version()
           .usage-form label {
             margin: 0 1rem 0 0;
           }
-          .usage-form form div {
+          .usage-form form > div {
+            margin: 0 2rem 0 0;
+          }
+          .usage-form form > .dates {
+            display: flex;
+            align-items: center;
+          }
+          .usage-form form > .dates div:first-child {
             margin: 0 2rem 0 0;
           }
           h2 {
@@ -1419,11 +1428,17 @@ function get_client_version()
             padding: 0.2rem 2rem;
             border-radius: 0.5rem;
           }
-          select {
+          .usage-form select {
             background-color: #323442;
             border: 1px solid #4c4d58;
+            color: #7e8190;
             padding: 0.2rem 2rem;
             border-radius: 0.5rem;
+            -webkit-appearance: none;
+            background-image: url('arrow.svg');
+            background-size: 8px;
+            background-repeat: no-repeat;
+            background-position: right 6px center;
           }
           .usage .seperator {
             width: 100%;
@@ -1441,18 +1456,15 @@ function get_client_version()
               font-size: 1.4rem;
               font-weight: bold;
             }
-            .usage-form form {
+            .usage-form form > .dates {
               flex-direction: column;
               align-items: flex-start;
             }
-            .usage-form label {
-              width: 50px;
+            .usage-form form > .dates div:first-child {
+              margin: 0 0 0.5rem 0;
             }
-            .usage-form label.long {
-              width: auto;
-            }
-            .usage-form form > div {
-              padding: 0.5rem 0;
+            .usage-form .dates label {
+              width: 40px;
             }
             .usage-headings div:first-child, .usage-line div:first-child {
               width: 100px;
