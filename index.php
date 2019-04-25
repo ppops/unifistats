@@ -38,7 +38,9 @@ if (function_exists('curl_version')) {
 /**
  * in order to use the PHP $_SESSION array for temporary storage of variables, session_start() is required
  */
-session_start();
+session_start([
+  'cookie_lifetime' => 604800,
+]);
 
 /**
  * check whether user has requested to clear (force expiry) the PHP session
@@ -48,7 +50,9 @@ if (isset($_GET['reset_session']) && $_GET['reset_session'] == true) {
     $_SESSION = [];
     session_unset();
     session_destroy();
-    session_start();
+    session_start([
+      'cookie_lifetime' => 604800,
+    ]);
     header("Location: " . strtok($_SERVER['REQUEST_URI'], '?'));
     exit;
 }
