@@ -1456,7 +1456,7 @@ function get_client_version()
             background-color: #323442;
             margin: 10px 0 20px;
           }
-          @media screen and (max-width: 812px) {
+          @media screen and (max-width: 820px) {
             .usage-line span {
               display: none;
             }
