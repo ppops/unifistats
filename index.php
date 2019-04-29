@@ -1456,10 +1456,7 @@ function get_client_version()
             background-color: #323442;
             margin: 10px 0 20px;
           }
-          @media screen and (max-width: 780px) {
-            .usage-line span {
-              display: none;
-            }
+          @media screen and (max-width: 812px) {
             .usage-headings {
               font-size: 1.4rem;
               font-weight: bold;
@@ -1481,7 +1478,7 @@ function get_client_version()
               padding: 0.2rem 1.2rem;
             }
             .usage-headings div:first-child, .usage-line div:first-child {
-              width: 100px;
+              width: 200px;
             }
             .navbar-collapse {
               padding-right: 0;
@@ -1492,6 +1489,14 @@ function get_client_version()
             }
             .nav>li>a {
               box-sizing: border-box;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            .usage-line span {
+              display: none;
+            }
+            .usage-headings div:first-child, .usage-line div:first-child {
+              width: 100px;
             }
           }
         </style>
