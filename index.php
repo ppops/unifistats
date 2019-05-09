@@ -1275,7 +1275,13 @@ function get_client_version()
             });
             
             $grandTotal = Math.round( $grandTotal_raw * 100 ) / 100;
-            $('.usage').prepend('<h2>Total: ' + $grandTotal + 'GB</h2>');
+            if ($grandTotal > 1000) {
+              $grandTotal = $grandTotal / 1000;
+              $grandTotal = Math.round( $grandTotal * 100 ) / 100;
+              $('.usage').prepend('<h2>Total: ' + $grandTotal + 'TB</h2>');
+            } else {
+              $('.usage').prepend('<h2>Total: ' + $grandTotal + 'GB</h2>');
+            }
 
             <?php if ($from_d && $from_m && $from_y && $to_d && $to_m && $to_y): ?>
               $('.usage').prepend('<div class="seperator"></div><h5>Usage from <?php echo $from_d . '/' . $from_m . '/' . $from_y . ' to ' . $to_d . '/' . $to_m . '/' . $to_y; ?></h5>');
