@@ -1258,9 +1258,18 @@ function get_client_version()
 
                   $total_raw = $down_raw + $up_raw;
                   $total = Math.round( $total_raw * 100 ) / 100;
+                  $total_whole = Math.round( $total_raw * 1 ) / 1;
+
+                  $usage_line_color = '';
+                  if ($total_whole <= 33) {
+                    $usage_line_color = 'green';
+                  } else if ($total_whole >= 33 && $total_whole <= 66) {
+                    $usage_line_color = 'orange';
+                  }
 
                   $usage_line = '';
                   $usage_line += '<div class="usage-line">';
+                    $usage_line += '<div class="usage-line-bar" style="background-color: ' + $usage_line_color + '; width: ' + $total_whole + '%;"></div>';
                     $usage_line += '<div>' + $dateMomentPretty + ' <span>(' + $days + ' days ago)</span></div>';
                     $usage_line += '<div>' + $up + 'GB</div>';
                     $usage_line += '<div>' + $down + 'GB</div>';
@@ -1392,10 +1401,21 @@ function get_client_version()
           .usage {
             padding: 0 2rem 2rem;
             box-sizing: border-box;
+            overflow: hidden;
           }
           .usage div {
             padding: 0.2rem;
             box-sizing: border-box;
+            position: relative
+          }
+          .usage .usage-line-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100%;
+            background: red;
+            opacity: 0.1;
           }
           .usage-headings {
             font-size: 1.8rem;
