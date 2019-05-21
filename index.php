@@ -1391,6 +1391,9 @@ function get_client_version()
             border: 1px solid #4c4d58;
             color: white;
           }
+          .back-to-top {
+            z-index: 2;
+          }
 
 
           body {
